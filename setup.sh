@@ -26,7 +26,7 @@ wait
 sudo chmod -R 777  ~/Pictures/
 wait
 echo "Ownership set"
-chsh -S /usr/bin/fish
+chsh -s /usr/bin/fish
 wait
 echo "Fish set to default shell"
 echo "Reboot or whatever now, it's all done :3"
