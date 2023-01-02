@@ -21,9 +21,12 @@ echo "SDDM theme conf moved"
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 wait
 echo "GTK dark mode set"
-sudo chmod 700 -R ~/.config/
+sudo chmod -R 777 ~/.config/
 wait
-sudo chmod 700 -R ~/Pictures/
+sudo chmod -R 777  ~/Pictures/
 wait
 echo "Ownership set"
+chsh -S /usr/bin/fish
+wait
+echo "Fish set to default shell"
 echo "Reboot or whatever now, it's all done :3"
