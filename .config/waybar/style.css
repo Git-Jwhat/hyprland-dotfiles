@@ -111,10 +111,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
+#mpd,
 
 #window,
 #workspaces {
@@ -143,8 +140,14 @@ button:hover {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.1) 2 2 5 2px;
+    background-color: #1a1b26;
+    color: #ffb43b;
+    border-radius: 14px;
+    padding: 0px;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin: 4px 3px 4px 3px;
 }
 
 #battery.charging, #battery.plugged {
@@ -172,26 +175,16 @@ button:hover {
 label:focus {
     background-color: #000000;
 }
-
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
-#memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
-}
-
+#disk,
 #backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
+    box-shadow: rgba(0, 0, 0, 0.1) 2 2 5 2px;
+    color: #7aa2f7;
+    background-color: #1a1b26;
+    border-radius: 14px;
+    padding: 0px;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin: 4px 3px 4px 3px;
 }
 
 #network.disconnected {
