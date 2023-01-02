@@ -1,0 +1,13 @@
+yay:
+hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist xdg-desktop-portal-wlr xdg-desktop-portal-hyprland-git networkmanager-dmenu-git sddm-theme-aerial-git
+
+pacman:
+alacritty wofi ttf-nerd-fonts-symbols-2048-em ttf-nerd-fonts-symbols-2048-em-mono ttf-nerd-fonts-symbols-common pavucontrol nnn btop playerctl $(pacman -Ssq noto-fonts) yt-dlp dunst polkit polkit-gnome light fish python-requests 
+
+sudo cp /usr/share/sddm/themes/aerial/theme.conf /usr/share/sddm/themes/aerial/theme.conf.user
+
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+fisher install IlanCosman/tide@v5

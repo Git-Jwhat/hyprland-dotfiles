@@ -1,0 +1,53 @@
+* {
+    font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+    font-size: 12px;
+}
+
+#window {
+	background-color: rgba(33, 33, 33, 0.7);
+	border-radius: 0px;
+}
+
+#outer-box {
+	padding: 20px;
+}
+
+#input {
+	background-color: rgba(66, 66, 66, 0.8);
+	border: 0px solid;
+	padding: 8px 12px;
+}
+
+#scroll {
+	margin-top: 20px;
+}
+
+#inner-box {
+}
+
+#img {
+	padding-right: 8px;
+}
+
+#text {
+}
+
+#text:selected {
+}
+
+#entry {
+	padding: 6px;
+}
+
+#entry:selected {
+}
+
+#unselected {
+}
+
+#selected {
+}
+
+#input, #entry:selected {
+	border-radius: 4px;
+}

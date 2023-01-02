@@ -1,0 +1,141 @@
+{
+     "layer": "top", // Waybar at top layer
+     "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces", "tray"],
+    "modules-center": ["custom/weather", "clock", "custom/mediaplayer"],
+    "modules-right": ["custom/updater", "pulseaudio", "custom/clipboard", "bluetooth",  "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "custom/power"],
+    // Modules configuration
+         "wlr/workspaces": {
+        "format": "{icon}",
+        "format-active": " {icon} ",
+        "on-click": "activate"
+    },
+    "custom/mediaplayer": {
+    	"exec": "/usr/bin/python3 ~/.config/waybar/custom_modules/mediaplayer.py",
+    	"format": "{}  ",
+    	"return-type": "json",
+    	"on-click": "playerctl play-pause",
+    	"on-scroll-up": "playerctl next",
+    	"on-scroll-down": "playerctl previous"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "/usr/bin/python3 ~/.config/waybar/custom_modules/weather.py",
+        "return-type": "json"
+    },
+    "custom/updater":{
+        "format": " {}",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "[[ $(checkupdates | wc -l) ]]",
+        "interval": 300,
+        "on-click": "alacritty -e yay -Syu"
+    },
+    "custom/power": {
+    	"format": "",
+    	"on-click": "bash ~/.config/waybar/custom_modules/wofi-power.sh"
+    },
+    "custom/clipboard": {
+    	"format": "",
+    	"on-click": "cliphist list | wofi --dmenu -p 'Copy selection' | cliphist decode | wl-copy",
+    	"on-click-right": "cliphist list | wofi --dmenu -p 'Delete selection' | cliphist delete"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "{: %I:%M%p   %A, %h %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "interval": 1,
+        "tooltip": false,
+        "on-click": "alacritty -e btop"
+    },
+    "memory": {
+        "format": "{}% ",
+        "on-click": "alacritty -e btop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 95,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "on-click": "alacritty -e btop"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "bluetooth": {
+    	"format": "",
+    	"format-connected": " {device_alias}",
+    	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+    	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    	"on-click": "alacritty -e bluetuith"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr} ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "networkmanager_dmenu"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
