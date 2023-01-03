@@ -1,9 +1,9 @@
 #!/bin/bash
-yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist xdg-desktop-portal-wlr networkmanager-dmenu-git sddm-theme-aerial-git
+yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist xdg-desktop-portal-wlr networkmanager-dmenu-git sddm-theme-aerial-git amberol
 wait
 yay --save --nocleanmenu --nodiffmenu --removemake --answerclean All --answerdiff All -S xdg-desktop-portal-hyprland-git 
 wait
-yay -S alacritty wofi ttf-nerd-fonts-symbols-2048-em ttf-nerd-fonts-symbols-2048-em-mono ttf-nerd-fonts-symbols-common noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pavucontrol nnn btop playerctl yt-dlp dunst polkit polkit-gnome light fish python-requests micro cmus firefox libnotify alsa-utils
+yay -S alacritty wofi ttf-nerd-fonts-symbols-2048-em ttf-nerd-fonts-symbols-2048-em-mono ttf-nerd-fonts-symbols-common noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pavucontrol nnn btop playerctl yt-dlp dunst polkit polkit-gnome light fish python-requests micro firefox libnotify alsa-utils
 wait
 echo "Packages have been downloaded"
 sudo cp -R ./.config/ ~/
