@@ -5,7 +5,7 @@ set -eu
 # $./brightness.sh down
 
 get_brightness () {
-    b=$(light | grep -oE '^[0-9]+')
+    b=$(brightnessctl | grep -o "(.*)" | cut -d "%" -f 1 | cut -d "(" -f 2)
 }
 
 send_notification () {
@@ -15,26 +15,26 @@ send_notification () {
 brightness_check () {
     get_brightness
     if [ "$b" -ge 70 ]; then
-        changevalue="10"
+        changevalue="10%"
     elif [ "$b" -ge 50 ]; then
-    	changevalue="10"
+    	changevalue="10%"
     elif [ "$b" -ge 10 ]; then
-    	changevalue="5"
+    	changevalue="5%"
     elif [ "$b" -ge 5 ]; then
-        changevalue="2"
+        changevalue="2%"
     else
-    	changevalue="1"
+    	changevalue="1%"
     fi
 }
 case $1 in
     up)
 	brightness_check
-        light -A $changevalue > /dev/null
+        brightnessctl s +$changevalue > /dev/null
         send_notification
         ;;
     down)
 	brightness_check
-        light -U $changevalue > /dev/null
+        brightnessctl s $changevalue- > /dev/null
         send_notification
         ;;
 esac
