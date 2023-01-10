@@ -3,7 +3,7 @@ yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-g
 
 yay --save --nocleanmenu --nodiffmenu --removemake --answerclean All --answerdiff All -S xdg-desktop-portal-hyprland-git 
 
-yay -S alacritty wofi ttf-nerd-fonts-symbols-2048-em ttf-nerd-fonts-symbols-2048-em-mono ttf-nerd-fonts-symbols-common noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pavucontrol nnn btop playerctl yt-dlp dunst polkit polkit-gnome light fish python-requests micro firefox libnotify alsa-utils
+yay -S alacritty wofi ttf-nerd-fonts-symbols-2048-em ttf-nerd-fonts-symbols-2048-em-mono ttf-nerd-fonts-symbols-common noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pavucontrol nnn btop playerctl yt-dlp dunst polkit polkit-gnome brightnessct fish python-requests micro firefox libnotify alsa-utils
 
 echo "Packages have been downloaded"
 sudo cp -R ./.config/ ~/
