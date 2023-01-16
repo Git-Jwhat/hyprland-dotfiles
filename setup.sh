@@ -1,5 +1,5 @@
 #!/bin/bash
-yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist xdg-desktop-portal-wlr networkmanager-dmenu-git sddm-theme-aerial-git amberol
+yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist networkmanager-dmenu-git sddm-theme-aerial-git amberol
 
 yay --save --nocleanmenu --nodiffmenu --removemake --answerclean All --answerdiff All -S xdg-desktop-portal-hyprland-git 
 
