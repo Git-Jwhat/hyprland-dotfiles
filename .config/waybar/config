@@ -31,6 +31,7 @@
     },
     "custom/updater":{
         "format": " {}",
+        "tooltip": false,
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 300,
@@ -38,10 +39,12 @@
     },
     "custom/power": {
     	"format": "",
+    	"tooltip": false,
     	"on-click": "bash ~/.config/waybar/custom_modules/wofi-power.sh"
     },
     "custom/clipboard": {
     	"format": "",
+    	"tooltip": false,
     	"on-click": "cliphist list | wofi --dmenu -p 'Copy selection' | cliphist decode | wl-copy",
     	"on-click-right": "cliphist list | wofi --dmenu -p 'Delete selection' | cliphist delete"
     },
@@ -71,6 +74,7 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 95,
         // "format-critical": "{temperatureC}°C {icon}",
+        "tooltip": false,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
         "on-click": "alacritty -e btop"
