@@ -136,6 +136,7 @@ button:hover {
     padding: 0px;
     padding-right: 6px;
     padding-left: 6px;
+    padding-bottom: 5px;
     margin: 4px 3px 4px 3px;
 }
 
@@ -147,6 +148,7 @@ button:hover {
     padding: 0px;
     padding-right: 6px;
     padding-left: 6px;
+    padding-bottom: 5px;
     margin: 4px 3px 4px 3px;
 }
 
@@ -158,6 +160,7 @@ button:hover {
     padding: 0px;
     padding-right: 6px;
     padding-left: 6px;
+    padding-bottom: 5px;
     margin: 4px 3px 4px 3px;
 }
 
@@ -176,6 +179,7 @@ button:hover {
     padding: 0px;
     padding-right: 6px;
     padding-left: 6px;
+    padding-bottom: 5px;
     margin: 4px 3px 4px 3px;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -196,6 +200,7 @@ label:focus {
     padding: 0px;
     padding-right: 6px;
     padding-left: 6px;
+    padding-bottom: 5px;
     margin: 4px 3px 4px 3px;
 }
 
@@ -207,6 +212,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -246,6 +252,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -257,6 +264,7 @@ label:focus {
     padding: 0px;
     padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -268,6 +276,7 @@ label:focus {
     padding: 0px;
     padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -279,6 +288,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -290,6 +300,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -301,6 +312,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -312,6 +324,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -333,6 +346,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -343,6 +357,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-bottom: 5px;
 	margin: 4px 3px 4px 3px;
 }
 
@@ -354,6 +369,7 @@ label:focus {
 	padding: 0px;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-bottom: 5px;
 	margin: 4px 10px 4px 3px;
 }
 
@@ -365,5 +381,6 @@ label:focus {
 		padding: 0px;
 		padding-right: 10px;
 		padding-left: 10px;
+		padding-bottom: 5px;
 		margin: 4px 10px 4px 3px;
 }
