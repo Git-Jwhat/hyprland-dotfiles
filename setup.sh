@@ -38,5 +38,6 @@ sudo mkdir ~/.icons/default/
 sudo cp ./.icons/default/index.theme ~/.icons/default/
 gsettings set org.gnome.desktop.interface cursor-theme BreezeX-Black
 echo "Cursor theme set"
+sudo sed -i '5i QT_QPA_PLATFORMTHEME=qt5ct' /etc/environment
 sudo rm /usr/share/applications/qt5ct.desktop
 echo "Reboot or whatever now, it's all done :3"
