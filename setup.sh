@@ -1,5 +1,5 @@
 #!/bin/bash
-yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist networkmanager-dmenu-git sddm-theme-aerial-git amberol
+yay --save --nocleanmenu --nodiffmenu --removemake -S hyprland waybar-hyprland-git hyprpaper-git bluetuith mangohud pokemon-colorscripts-git cliphist networkmanager-dmenu-git sddm-theme-aerial-git amberol xcursor-breeze
 
 yay --save --nocleanmenu --nodiffmenu --removemake --answerclean All --answerdiff All -S xdg-desktop-portal-hyprland-git 
 
@@ -29,16 +29,10 @@ echo "Ownership set"
 chsh -s /usr/bin/fish
 echo "Fish set to default shell"
 
-mkdir ~/.local
-mkdir ~/.local/share
-mkdir ~/.local/share/icons
-sudo tar xvf BreezeX-Black.tar.gz -C ~/.local/share/icons
-echo "Cursor icon extracted"
-
 mkdir ~/.icons
 mkdir ~/.icons/default/
 sudo cp ./.icons/default/index.theme ~/.icons/default/
-gsettings set org.gnome.desktop.interface cursor-theme BreezeX-Black
+gsettings set org.gnome.desktop.interface cursor-theme Breeze
 echo "Cursor theme set"
 sudo sed -i '5i QT_QPA_PLATFORMTHEME=qt5ct' /etc/environment
 sudo rm /usr/share/applications/qt5ct.desktop
