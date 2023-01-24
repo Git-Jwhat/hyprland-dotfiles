@@ -29,14 +29,14 @@ echo "Ownership set"
 chsh -s /usr/bin/fish
 echo "Fish set to default shell"
 
-sudo mkdir ~/.local
-sudo mkdir ~/.local/share
-sudo mkdir ~/.local/share/icons
+mkdir ~/.local
+mkdir ~/.local/share
+mkdir ~/.local/share/icons
 sudo tar xvf BreezeX-Black.tar.gz -C ~/.local/share/icons
 echo "Cursor icon extracted"
 
-sudo mkdir ~/.icons
-sudo mkdir ~/.icons/default/
+mkdir ~/.icons
+mkdir ~/.icons/default/
 sudo cp ./.icons/default/index.theme ~/.icons/default/
 gsettings set org.gnome.desktop.interface cursor-theme BreezeX-Black
 echo "Cursor theme set"
