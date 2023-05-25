@@ -2,7 +2,7 @@
 ## Prerequisites
 - Arch install
 - SDDM (Display Manager)
-- AMD GPU (No soy boy GPU's here)
+- AMD GPU
 
 ## Install
 **Simply give permissions and run:**
